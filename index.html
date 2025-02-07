@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISTRI SOCIAL</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>DISTRI SOCIAL</h1>
+
+        <div id="register-container">
+            <h2>Registrarse</h2>
+            <input type="text" id="regUserId" placeholder="ID de usuario">
+            <input type="text" id="regFullName" placeholder="Nombre y Apellido (opcional)">
+            <input type="password" id="regPassword" placeholder="Contraseña">
+            <button onclick="register()">Registrarse</button>
+            <p>¿Ya tienes cuenta? <a href="#" onclick="showLogin()">Iniciar sesión</a></p>
+        </div>
+
+        <div id="login-container" class="hidden">
+            <h2>Iniciar Sesión</h2>
+            <input type="text" id="userId" placeholder="ID de usuario">
+            <input type="password" id="password" placeholder="Contraseña">
+            <button onclick="login()">Ingresar</button>
+            <p>¿No tienes cuenta? <a href="#" onclick="showRegister()">Regístrate</a></p>
+        </div>
+
+        <div id="profile-container" class="hidden">
+            <h2>Perfil</h2>
+            <p id="userInfo"></p>
+            <button onclick="logout()">Cerrar Sesión</button>
+
+            <h3>Opciones</h3>
+            <button onclick="showStudentList()">📋 Lista de Estudiantes</button>
+            <button onclick="showFriendRequests()">📩 Solicitudes de Amistad</button>
+            <button onclick="showFriendsList()">Lista de Amigos</button>
+            <div id="friends-list-container" class="hidden">
+                <h3>Lista de Amigos</h3>
+                <ul id="friends-list"></ul>
+            </div>
+            
+            <div id="students-list-container" class="hidden">
+                <h3>Lista de Estudiantes</h3>
+                <ul id="students-list"></ul>
+            </div>
+
+            <div id="friend-requests-container" class="hidden">
+                <h3>Solicitudes de Amistad</h3>
+                <ul id="friend-requests"></ul>
+            </div>
+
+            <div id="friends-list-container" class="hidden">
+                <h3>Lista de Amigos</h3>
+                <ul id="friends-list"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
